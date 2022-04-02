@@ -18,7 +18,7 @@ const CardsRef = galleryRef.getElementsByTagName("a");
 const onImagesQuery = (event) => {
     event.preventDefault();
     galleryRef.innerHTML = "";
-    newApiService.query = event.currentTarget.searchQuery.value;
+    newApiService.query = event.currentTarget.queryInput.value;
     newApiService.resetPage();
     newApiService.fetchPic().then((images) => {
     if (newApiService.query === "") { loadMoreButton.classList.add("is-hidden"); return };    
